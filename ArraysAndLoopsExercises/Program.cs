@@ -95,6 +95,14 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("WHICH DAY OF THE WEEK?\n");
 
             // Enter your solution here
+            string[] days = new string[7] {
+                "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+            };
+
+            Console.WriteLine("Enter a number between 1 and 7: ");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(days[userInput - 1]);
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
