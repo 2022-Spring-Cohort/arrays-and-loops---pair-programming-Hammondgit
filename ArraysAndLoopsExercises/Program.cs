@@ -280,6 +280,27 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("COMMON VALUES\n");
 
             // Enter your solution here
+            int[] array1 = new int[3];
+            int[] array2 = new int[3] { 1 ,2, 3};
+            int[] array3 = new int[3] { 2, 3, 4 };
+            int k = 0;
+
+            for (int i = 0; i < array2.Length; i++)
+            {
+                for (int j = 0; j < array3.Length; j++)
+                {
+                    if (array3[j] == array2[i])
+                    {
+                        if(Array.IndexOf(array1,array2[i]) == -1)
+                        {
+                            array1[k] = array2[i];
+                            Console.WriteLine(array1[k]);
+                            k++;
+                        }
+                    }
+                }
+            }
+            
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
