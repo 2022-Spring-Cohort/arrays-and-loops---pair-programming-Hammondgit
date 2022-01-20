@@ -1,4 +1,6 @@
 ﻿using System;
+//using System.IEnumerable;
+
 
 namespace ArraysAndLoopsExercises
 {
@@ -115,8 +117,33 @@ namespace ArraysAndLoopsExercises
 
             Console.Clear();
             Console.WriteLine("FIND THE SMALLEST NUMBER IN AN ARRAY\n");
+            int[] userInput = new int[5];
 
-            // Enter your solution here
+            
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Input a number: ");
+                userInput[i] = Convert.ToInt32(Console.ReadLine());
+
+
+
+
+            }
+
+            int min = Int32.MaxValue;
+
+            
+
+            for (int j = 0; j < userInput.Length; j++)
+            {
+                if (userInput[j] < min)
+                {
+                    min = userInput[j];
+                }
+            }
+
+            Console.WriteLine($"Smallest number is: {min}");
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
