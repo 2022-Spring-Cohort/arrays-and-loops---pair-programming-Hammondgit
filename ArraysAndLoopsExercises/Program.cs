@@ -221,7 +221,23 @@ namespace ArraysAndLoopsExercises
             Console.Clear();
             Console.WriteLine("WHAT'S THE SECOND TO LAST WORD?\n");
 
-            // Enter your solution here
+            Console.WriteLine("Enter a sentence or a phrase consisting of 4 words ");
+            string userInput = Console.ReadLine();
+
+            string[] words = userInput.Split(' ');
+
+
+            try
+            {
+              Console.WriteLine(words[words.Length - 2]);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("No secound to last word");
+            }
+
+
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
