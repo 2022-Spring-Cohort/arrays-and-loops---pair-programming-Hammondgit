@@ -176,7 +176,28 @@ namespace ArraysAndLoopsExercises
             Console.Clear();
             Console.WriteLine("WHAT'S THE LONGEST WORD?\n");
 
-            // Enter your solution here
+            
+
+             
+            Console.WriteLine("enter four words serpteed by a space: ");
+            string userInput = Console.ReadLine();
+
+            
+            string[] words = userInput.Split(' ');
+            string longetsWord = words[0];
+
+            for (int i = 1; i < words.Length; i++)
+            {
+                if (words[i].Length > longetsWord.Length)
+                {
+                    longetsWord = words[i];
+
+                }
+
+            }
+
+
+            Console.WriteLine(longetsWord);
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
