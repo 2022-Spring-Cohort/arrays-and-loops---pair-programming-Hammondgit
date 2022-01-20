@@ -184,20 +184,30 @@ namespace ArraysAndLoopsExercises
 
             
             string[] words = userInput.Split(' ');
-            string longetsWord = words[0];
-
+            string longestWord1 = words[0];
+            string longestWord2 = "";
             for (int i = 1; i < words.Length; i++)
             {
-                if (words[i].Length > longetsWord.Length)
+                if (words[i].Length == longestWord1.Length)
                 {
-                    longetsWord = words[i];
-
+                    longestWord2 = words[i];
+                }
+                else if (words[i].Length > longestWord1.Length)
+                {
+                    longestWord1 = words[i];
+                    longestWord2 = "";
                 }
 
             }
 
-
-            Console.WriteLine(longetsWord);
+            if (longestWord2 == "")
+            {
+                Console.WriteLine($"The longest word is {longestWord1}");
+            }
+            else
+            {
+                Console.WriteLine($"The longest words are {longestWord1} and {longestWord2}");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
