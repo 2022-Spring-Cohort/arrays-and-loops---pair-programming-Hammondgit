@@ -253,6 +253,19 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("PRINT A TRIANGLE\n");
 
             // Enter your solution here
+            Console.WriteLine("Enter a number between 3 and 6");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= userInput; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write('*');
+                }
+                Console.Write('\n');
+            }
+
+
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
