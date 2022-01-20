@@ -124,10 +124,6 @@ namespace ArraysAndLoopsExercises
             {
                 Console.WriteLine("Input a number: ");
                 userInput[i] = Convert.ToInt32(Console.ReadLine());
-
-
-
-
             }
 
             int min = Int32.MaxValue;
@@ -158,6 +154,15 @@ namespace ArraysAndLoopsExercises
             Console.WriteLine("SHOPPING LIST\n");
 
             // Enter your solution here
+            string[] foodItems = new string[4]
+            {
+                "Milk", "Eggs", "Ham", "Pancake Mix"
+            };
+
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(foodItems[i]);
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
